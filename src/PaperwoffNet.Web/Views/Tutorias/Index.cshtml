@@ -1,0 +1,102 @@
+﻿@model IEnumerable<PaperwoffNet.Infrastructure.Tutorias>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Transporte)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Total)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.HoraInicio)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.HoraFin)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CantidadHoras)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Paga)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.AsignaturaIdAsignaturaNavigation)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.EstudiantesIdEstudiantesNavigation)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TipoClaseIdTipoClaseNavigation)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TutoresIdTutoresNavigation)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.UsersIdUserNavigation)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.VirPresIdVirPresNavigation)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Transporte)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Total)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.HoraInicio)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.HoraFin)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CantidadHoras)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Paga)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AsignaturaIdAsignaturaNavigation.IdAsignatura)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.EstudiantesIdEstudiantesNavigation.IdEstudiantes)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TipoClaseIdTipoClaseNavigation.IdTipoClase)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TutoresIdTutoresNavigation.IdTutores)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.UsersIdUserNavigation.IdUser)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.VirPresIdVirPresNavigation.IdVirPres)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.IdTutorias">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.IdTutorias">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.IdTutorias">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

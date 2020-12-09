@@ -1,0 +1,63 @@
+﻿@model PaperwoffNet.Infrastructure.Tutorias
+
+@{
+    ViewData["Title"] = "Create";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Create</h1>
+
+<h4>Tutorias</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="UsersIdUser" class="control-label"></label>
+                <select asp-for="UsersIdUser" class ="form-control" asp-items="ViewBag.UsersIdUser"></select>
+            </div>
+            <div class="form-group">
+                <label asp-for="TutoresIdTutores" class="control-label"></label>
+                <select asp-for="TutoresIdTutores" class ="form-control" asp-items="ViewBag.TutoresIdTutores"></select>
+            </div>
+            <div class="form-group">
+                <label asp-for="AsignaturaIdAsignatura" class="control-label"></label>
+                <select asp-for="AsignaturaIdAsignatura" class ="form-control" asp-items="ViewBag.AsignaturaIdAsignatura"></select>
+            </div>
+            <div class="form-group">
+                <label asp-for="EstudiantesIdEstudiantes" class="control-label"></label>
+                <select asp-for="EstudiantesIdEstudiantes" class ="form-control" asp-items="ViewBag.EstudiantesIdEstudiantes"></select>
+            </div>
+            <div class="form-group">
+                <label asp-for="TipoClaseIdTipoClase" class="control-label"></label>
+                <select asp-for="TipoClaseIdTipoClase" class ="form-control" asp-items="ViewBag.TipoClaseIdTipoClase"></select>
+            </div>
+            <div class="form-group">
+                <label asp-for="VirPresIdVirPres" class="control-label"></label>
+                <select asp-for="VirPresIdVirPres" class ="form-control" asp-items="ViewBag.VirPresIdVirPres"></select>
+            </div>
+            <div class="form-group">
+                <label asp-for="HoraInicio" class="control-label"></label>
+                <input asp-for="HoraInicio" class="form-control" />
+                <span asp-validation-for="HoraInicio" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="HoraFin" class="control-label"></label>
+                <input asp-for="HoraFin" class="form-control" />
+                <span asp-validation-for="HoraFin" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
