@@ -10,9 +10,9 @@
 <p>
     <a asp-action="Create">Create New</a>
 </p>
-<table class="table">
+<table class="table table-striped projects dt-responsive nowrap">
     <thead>
-        <tr>
+        <tr role="row">
             <th>
                 @Html.DisplayNameFor(model => model.Descripcion)
             </th>
@@ -26,9 +26,15 @@
                 @Html.DisplayFor(modelItem => item.Descripcion)
             </td>
             <td>
-                <a asp-action="Edit" asp-route-id="@item.IdTipoClase">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.IdTipoClase">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.IdTipoClase">Delete</a>
+                <a asp-action="Edit" asp-route-id="@item.IdTipoClase" class="btn btn-outline-primary btn-sm">
+                    <i class="fa fa-paw"></i>
+                    Edit
+                </a>
+                <a asp-action="Details" asp-route-id="@item.IdTipoClase" class="btn btn-info btn-sm">
+                    <i class="fa fa-circle"></i>
+                    Details
+                </a>
+                <a asp-action="Delete" asp-route-id="@item.IdTipoClase" class="btn btn-danger btn-sm">Delete</a>
             </td>
         </tr>
 }

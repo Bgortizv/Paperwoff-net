@@ -10,9 +10,9 @@
 <p>
     <a asp-action="Create">Create New</a>
 </p>
-<table class="table">
+<table class="table table-striped projects dt-responsive nowrap">
     <thead>
-        <tr>
+        <tr role="row">
             <th>
                 @Html.DisplayNameFor(model => model.Fecha)
             </th>
@@ -59,12 +59,19 @@
                 @Html.DisplayFor(modelItem => item.TotalHoras)
             </td>
             <td>
+                @Html.DisplayFor(modelItem => item.TutoresIdTutoresNavigation.UsersIdUserNavigation.Nombre)&nbsp;
                 @Html.DisplayFor(modelItem => item.TutoresIdTutoresNavigation.IdTutores)
             </td>
             <td>
-                <a asp-action="Edit" asp-route-id="@item.IdFactura">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.IdFactura">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.IdFactura">Delete</a>
+                <a asp-action="Edit" asp-route-id="@item.IdFactura" class="btn btn-outline-primary btn-sm">
+                    <i class="fa fa-paw"></i>
+                    Edit
+                </a>
+                <a asp-action="Details" asp-route-id="@item.IdFactura" class="btn btn-info btn-sm">
+                    <i class="fa fa-circle"></i>
+                    Details
+                </a>
+                <a asp-action="Delete" asp-route-id="@item.IdFactura" class="btn btn-danger btn-sm">Delete</a>
             </td>
         </tr>
 }

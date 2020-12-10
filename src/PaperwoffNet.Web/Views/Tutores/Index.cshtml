@@ -10,39 +10,157 @@
 <p>
     <a asp-action="Create">Create New</a>
 </p>
-<table class="table">
+<table class="table table-striped projects dt-responsive nowrap">
     <thead>
-        <tr>
-            <th>
+        <tr role="row">
+            <th class="sorting_desc" aria-controls="datatable-responsive" rowspan="1" colspan="1" aria-sort="descending">
                 @Html.DisplayNameFor(model => model.FechaIngreso)
             </th>
-            <th>
+            <th class="sorting_desc" aria-controls="datatable-responsive" rowspan="1" colspan="1" aria-sort="descending">
                 @Html.DisplayNameFor(model => model.Profesion)
             </th>
-            <th>
+            <th class="sorting_desc" aria-controls="datatable-responsive" rowspan="1" colspan="1" aria-sort="descending">
                 @Html.DisplayNameFor(model => model.UsersIdUserNavigation)
             </th>
             <th></th>
         </tr>
     </thead>
     <tbody>
-@foreach (var item in Model) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.FechaIngreso)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Profesion)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.UsersIdUserNavigation.IdUser)
-            </td>
-            <td>
-                <a asp-action="Edit" asp-route-id="@item.IdTutores">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.IdTutores">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.IdTutores">Delete</a>
-            </td>
-        </tr>
-}
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.FechaIngreso)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Profesion)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.UsersIdUserNavigation.Nombre)&nbsp;
+                    @Html.DisplayFor(modelItem => item.UsersIdUserNavigation.Apellidos)
+                </td>
+                <td>
+                    <a  asp-action="Edit"   asp-route-id="@item.IdTutores" class="btn btn-outline-primary btn-sm">
+                        <i class="fa fa-paw"></i>
+                        Edit
+                    </a>
+                    <a asp-action="Details" asp-route-id="@item.IdTutores" class="btn btn-info btn-sm">
+                        <i class="fa fa-circle"></i>
+                        Details
+                    </a>
+                    <a asp-action="Delete" asp-route-id="@item.IdTutores" class="btn btn-danger btn-sm">Delete</a>
+                </td>
+            </tr>
+        }
     </tbody>
 </table>
+
+<!-- Modal EDITAR-->
+<div class="modal fade" id="editarusuario" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+     aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header border-0">
+                <h5 class="modal-title" id="exampleModalLabel">Edit user</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="text-center">
+                                <img src="../images/user.png " class="avatar img-circle " alt="avatar">
+                                <input type="file" class="form-control w-75 text-center m-auto">
+                            </div>
+                        </div>
+                        <div class="col-md-12 personal-info">
+                            <form class="form-horizontal" role="form">
+                                <div class="form-group">
+                                    <label class="col-lg-3 control-label">id tutor:</label>
+                                    <div class="col-lg-8">
+                                        <input class="form-control" type="text" id="idtutor" value="">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-lg-3 control-label">Last names:</label>
+                                    <div class="col-lg-8">
+                                        <input class="form-control" type="text" value="">
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label class="col-lg-3 control-label">Profesion:</label>
+                                    <div class="col-lg-8">
+                                        <input class="form-control" type="text" id="Profesion"  >
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-lg-3 control-label">Tipe of user:</label>
+                                    <div class="col-lg-8">
+                                        <div class="ui-select">
+                                            <select id="user" class="form-control">
+                                                <option value="">--</option>
+                                                <option value="Administrador">Administrator</option>
+                                                <option value="Nomina">Payroll</option>
+                                                <option value="Tutor">Tutor</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-md-3 control-label">Password:</label>
+                                    <div class="col-md-8">
+                                        <input class="form-control" type="password" value="11111122333">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-md-3 control-label">Repeat password:</label>
+                                    <div class="col-md-8">
+                                        <input class="form-control" type="password" value="11111122333">
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer border-0 justify-content-around">
+                <button type="button" class="btn w-100 btn-secondary" data-dismiss="modal">Cancel</button>
+                <button type="button" class="btn w-100 btn-info" data-dismiss="modal">Save</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- /Modal EDITAR-->
+
+
+
+
+<script src="~/lib/jquery/dist/jquery.js"></script>
+<script>
+
+    function ModalEdit(id_tutor) {
+        console.log("id ingreso" + id_tutor);
+
+        $('#editarusuario').modal('show');
+        $.ajax({       
+            Url: '/Tutores/ConsultaTutor',
+            data: {
+                id: id_tutor
+        },     
+        success: function(Resultado) {
+
+                $('#idtutor').val(Resultado.IdTutores);
+
+            $('#Profesion').val(Resultado.Profesion);
+            }
+        });
+
+
+
+    }
+
+</script>
+

@@ -10,10 +10,10 @@
 <p>
     <a asp-action="Create">Create New</a>
 </p>
-<table class="table">
+<table class="table table-striped projects dt-responsive nowrap">
     <thead>
-        <tr>
-            <th>
+        <tr role="row">
+            <th class="sorting_desc" aria-controls="datatable-responsive" rowspan="1" colspan="1" aria-sort="descending">
                 @Html.DisplayNameFor(model => model.Transporte)
             </th>
             <th>
@@ -55,7 +55,7 @@
     <tbody>
 @foreach (var item in Model) {
         <tr>
-            <td>
+            <td class="sorting_desc" aria-controls="datatable-responsive" rowspan="1" colspan="1" aria-sort="descending">
                 @Html.DisplayFor(modelItem => item.Transporte)
             </td>
             <td>
@@ -74,27 +74,36 @@
                 @Html.DisplayFor(modelItem => item.Paga)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.AsignaturaIdAsignaturaNavigation.IdAsignatura)
+                @Html.DisplayFor(modelItem => item.AsignaturaIdAsignaturaNavigation.NombreAsignatura)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.EstudiantesIdEstudiantesNavigation.IdEstudiantes)
+                @Html.DisplayFor(modelItem => item.EstudiantesIdEstudiantesNavigation.UsersIdUserNavigation.Nombre)&nbsp;
+                @Html.DisplayFor(modelItem => item.EstudiantesIdEstudiantesNavigation.UsersIdUserNavigation.Apellidos)
+            </td>
+            <td class="sorting_desc" aria-controls="datatable-responsive" rowspan="1" colspan="1" aria-sort="descending">
+                @Html.DisplayFor(modelItem => item.TipoClaseIdTipoClaseNavigation.Descripcion)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.TipoClaseIdTipoClaseNavigation.IdTipoClase)
+                @Html.DisplayFor(modelItem => item.TutoresIdTutoresNavigation.UsersIdUserNavigation.Nombre)&nbsp;
+                @Html.DisplayFor(modelItem => item.TutoresIdTutoresNavigation.UsersIdUserNavigation.Apellidos)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.TutoresIdTutoresNavigation.IdTutores)
+                @Html.DisplayFor(modelItem => item.UsersIdUserNavigation.Nombre)&nbsp;
+                @Html.DisplayFor(modelItem => item.UsersIdUserNavigation.Apellidos)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.UsersIdUserNavigation.IdUser)
+                @Html.DisplayFor(modelItem => item.VirPresIdVirPresNavigation.Descrip)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.VirPresIdVirPresNavigation.IdVirPres)
-            </td>
-            <td>
-                <a asp-action="Edit" asp-route-id="@item.IdTutorias">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.IdTutorias">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.IdTutorias">Delete</a>
+                <a asp-action="Edit" asp-route-id="@item.IdTutorias" class="btn btn-outline-primary btn-sm">
+                    <i class="fa fa-paw"></i>
+                    Edit
+                </a>
+                <a asp-action="Details" asp-route-id="@item.IdTutorias" class="btn btn-info btn-sm">
+                    <i class="fa fa-circle"></i>
+                    Details
+                </a>
+                <a asp-action="Delete" asp-route-id="@item.IdTutorias" class="btn btn-danger btn-sm">Delete</a>
             </td>
         </tr>
 }

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 
 namespace PaperwoffNet.Infrastructure
 {
@@ -16,14 +17,17 @@ namespace PaperwoffNet.Infrastructure
         public long? Documento { get; set; }
         public string Nombre { get; set; }
         public string Apellidos { get; set; }
+        [Display(Name = "Correo Electrónico")]
         public string EMail { get; set; }
         public long? Celular { get; set; }
         public bool? Estado { get; set; }
+        [Display(Name = "Dirección")]
         public string Direccion { get; set; }
         public string Cargo { get; set; }
         public string Password { get; set; }
         public int RoleIdRole { get; set; }
 
+        [Display(Name = "Role")]
         public virtual Roles RoleIdRoleNavigation { get; set; }
         public virtual ICollection<Estudiantes> Estudiantes { get; set; }
         public virtual ICollection<Tutores> Tutores { get; set; }

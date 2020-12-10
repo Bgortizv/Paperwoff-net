@@ -1,0 +1,535 @@
+body {
+  font-family: "Nunito", sans-serif;
+}
+
+.fondo-header {
+  background-image: url("../images/backgroundf.jpg");
+}
+
+.colorfondo {
+  background-color: #dadada;
+}
+
+header {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 9998;
+  background-color: #f2f2f2;
+}
+
+.inicio-sesion {
+  text-align: right;
+  max-width: 150px;
+}
+
+.sliderst {
+  height: 70%;
+}
+
+.logo {
+  max-width: 150px;
+}
+
+/* ----------------------------------------  404  ---------------------------------------- */
+
+#notfound .btn-404 {
+  width: 220px;
+  color: #007687;
+  border-color: #007687;
+}
+
+#notfound .btn-404:hover {
+  color: white;
+  background-color: #007687;
+}
+
+/* ----------------------------------------  404  ---------------------------------------- */
+
+.titulo {
+  font-size: 30px;
+  font-weight: 800;
+}
+
+.que-es {
+  color: black;
+}
+
+footer {
+  background-color: #38a5bc;
+  color: #ffffff;
+  width: 100%;
+  bottom: 0;
+}
+
+.bg-copyright {
+  background-color: #007687;
+  padding: 0.45rem;
+}
+
+.bg-copyright .caption-copyright p {
+  font-size: 0.6875rem;
+  margin: 0;
+  line-height: 1.125rem;
+  font-weight: 600;
+}
+
+.bg-copyright .caption-copyright {
+  margin-top: 8px;
+}
+
+.navbar-light .navbar-nav .nav-link {
+  color: rgba(0, 0, 0, 0.8);
+}
+
+/* ----------------------------------------  SLIDER  ---------------------------------------- */
+
+.swiper-slide {
+  height: 70vh;
+}
+
+.swiper-pagination-bullet-active-main {
+  background-color: #007687;
+}
+
+/* ----------------------------------------  SLIDER  ---------------------------------------- */
+
+.home-description h4 {
+  font-weight: 100;
+  color: black;
+}
+
+.section-form {
+  box-shadow: 0 0 4px rgba(106, 105, 105, 0.27);
+  padding: 2rem 4rem;
+  border-radius: 4px;
+  max-width: 650px;
+  margin: 0 auto;
+  margin-top: 10rem;
+  background: #fff;
+}
+
+.input-primary {
+  position: relative;
+  margin: 2rem 0 0;
+}
+
+.form-check {
+  color: #5e5e5e;
+  display: inline-block;
+}
+
+.subtitle-login {
+  font-weight: 700;
+  font-size: 1rem;
+  color: #5e5e5e;
+  letter-spacing: -0.18px;
+}
+
+.button-primary {
+  font-weight: 200;
+  color: #fff;
+  font-size: 1rem;
+  width: 100%;
+  border-radius: 2px;
+  height: calc(2.5rem + 2px);
+  background-color: #007687;
+  transition: 0.1s ease-in-out;
+  border-radius: 0.25rem;
+}
+
+.button-primary:hover {
+  background-color: #016372;
+  color: white;
+}
+
+input::placeholder {
+  color: #5e5e5e;
+  font-size: 14px;
+}
+
+input[type="checkbox"] + label {
+  display: block;
+  margin: 0.2em;
+  cursor: pointer;
+  padding: 0.2em;
+}
+
+input[type="checkbox"] {
+  opacity: 0;
+  display: block;
+  position: absolute !important;
+}
+
+input[type="checkbox"] + label:before {
+  content: "\2714";
+  border: 0.1em solid #aaa;
+  border-radius: 0.2em;
+  display: inline-block;
+  width: 25px;
+  height: 25px;
+  padding-left: 0.2em;
+  padding-bottom: 0.3em;
+  margin-right: 0.2em;
+  vertical-align: bottom;
+  color: transparent;
+  transition: 0.1s;
+}
+
+input[type="checkbox"]:checked + label:before {
+  background-color: #fff;
+  border-color: #fff;
+  color: #0e65b2;
+}
+
+#home input[type="checkbox"] + label:before {
+  width: 20px;
+  height: 20px;
+  border: 0.1em solid white;
+}
+
+#home input[type="checkbox"] + label {
+  font-size: 14px;
+  color: white;
+}
+
+input[type="checkbox"]:disabled + label:before {
+  transform: scale(1);
+  border-color: #aaa;
+}
+
+select {
+  font-size: 14px !important;
+}
+
+input[type=date]{
+  font-size: 14px;
+}
+.timepicker input{
+  font-size: 14px;
+}
+
+/* ----------------------------------------  HOME  ---------------------------------------- */
+
+/* ----------------------------------------  LOGIN  ---------------------------------------- */
+
+#login input[type="checkbox"] + label:before {
+  width: 15px;
+  height: 15px;
+}
+
+.legal-form {
+  font-weight: 400;
+  font-size: 0.75rem;
+  color: #5e5e5e;
+  line-height: 1rem;
+}
+
+#login h2 {
+  color: black;
+}
+
+/* ----------------------------------------  LOGIN  ---------------------------------------- */
+
+/* ----------------------------------------  MEDIA QUERY  ---------------------------------------- */
+
+@media (max-width: 768px) {
+  .swiper-slide {
+    height: 50vh;
+  }
+  h1 {
+    font-size: 32px;
+  }
+  h5 {
+    font-size: 18px;
+  }
+  h4 {
+    font-size: 18px;
+    text-align: center;
+  }
+  .img-description {
+    max-width: 280px;
+  }
+  .navbar-nav {
+    padding-left: 5px;
+  }
+  .section-form {
+    padding: 0;
+    margin-top: 6rem;
+    max-width: 340px;
+  }
+  .bg-copyright .caption-copyright p {
+    font-size: 10px;
+  }
+  .page-title .title_left {
+    width: 100%;
+  }
+  #cc .right_col {
+    min-height: 900px !important;
+  }
+  #rrhh .right_col {
+    min-height: 900px !important;
+  }
+  #usuarios .right_col {
+    min-height: 900px !important;
+    width: 100%;
+  }
+  #notfound .btn-404 {
+    max-width: 150px;
+  }
+  #usuarios .button-add {
+    max-width: 100%;
+    position: relative;
+  }
+  #rrhh .button-add {
+    max-width: 100%;
+    position: relative;
+  }
+  #cc .dataTables_wrapper {
+    padding: 0;
+    font-size: 12px;
+  }
+  .nav-sm .container.body .right_col {
+    padding-bottom: 0;
+  }
+}
+
+@media (max-width: 320px) {
+  .img-description {
+    max-width: 220px;
+  }
+  .nav-sm .navbar-right {
+    padding: 0;
+  }
+}
+@media (min-width: 1201px) and (max-width: 1280px) {
+  .canvasDoughnut {
+    width: 90px !important;
+    height: 90px !important;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1561px) {
+  .b-profile {
+    min-height: 60px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 768px) {
+  .img-description {
+    max-width: 200px;
+  }
+}
+
+@media (min-width: 1800px) and (max-width: 2000px) {
+  .main_container .top_nav {
+    width: 88%;
+  }
+}
+@media (min-width: 1600px) and (max-width: 1799px) {
+  .main_container .top_nav {
+    width: 86%;
+  }
+}
+@media (min-width: 1400px) and (max-width: 1599px) {
+  .main_container .top_nav {
+    width: 84%;
+  }
+}
+@media (min-width: 1200px) and (max-width: 1399px) {
+  .main_container .top_nav {
+    width: 81%;
+  }
+}
+@media (min-width: 1000px) and (max-width: 1199px) {
+  .main_container .top_nav {
+    width: 79%;
+  }
+}
+/* ----------------------------------------  MEDIA QUERY  ---------------------------------------- */
+
+.panel_toolbox {
+  min-width: 0;
+}
+
+.fc-day-grid-event .fc-content {
+  color: black !important;
+}
+
+.navbar-toggler {
+  font-size: 1.6rem;
+}
+
+#l-calendar .fc-unthemed {
+  max-width: 810px;
+  max-height: 800px;
+  margin: 0 auto;
+}
+
+#l-calendar .x_panel {
+  max-width: 810px;
+  max-height: 800px;
+  margin: 0 auto;
+}
+
+.main_container {
+  background: #2a3f54;
+}
+
+.form-group {
+  margin-bottom: 1.6rem;
+}
+
+table.dataTable.dtr-inline.collapsed > tbody > tr > td:first-child:before,
+table.dataTable.dtr-inline.collapsed > tbody > tr > th:first-child:before {
+  background-color: #6c757d;
+}
+
+#cc .btn {
+  font-size: 12px;
+}
+#usuarios .btn {
+  font-size: 12px;
+}
+
+#cc .last {
+  padding: 0;
+  vertical-align: middle;
+  font-size: 12px;
+}
+.button-add {
+  position: absolute;
+  z-index: 99;
+  width: 100%;
+  font-weight: 200;
+  color: #fff;
+  font-size: 1rem;
+  max-width: 200px;
+  border-radius: 2px;
+  height: calc(2.5rem + 2px);
+  background-color: #007687;
+  transition: 0.1s ease-in-out;
+  border-radius: 0.25rem;
+}
+
+#rrhh .dataTables_wrapper {
+  padding: 0;
+}
+
+.p-date {
+  color: #8f9398;
+}
+.cont-whatsapp-fixed {
+  position: fixed;
+  z-index: 99;
+  width: 75px;
+  height: 102px;
+  display: block;
+  top: 16%;
+  right: 15px;
+}
+
+.cont-whatsapp-fixed a {
+  background: url(../images/icon-whattsapp.svg) no-repeat center;
+  background-size: contain;
+  left: inherit;
+  bottom: inherit;
+  display: block;
+  width: 75px;
+  height: 102px;
+}
+
+@media screen and (max-width: 991px) {
+  .cont-whatsapp-fixed {
+    top: inherit;
+    bottom: 5%;
+    right: 10px;
+  }
+  #tutores .x_panel{
+    min-height: 500px !important;
+  }
+}
+.hero-card {
+  background-image: url("../images/s1.png");
+  background-size: cover;
+  height: 200px;
+}
+.right-form {
+  box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.75);
+}
+.hero h5,
+.hero h2,
+.hero h3,
+.hero h4,
+.hero p {
+  color: white;
+}
+
+.hero {
+  background-image: url("../images/b-hero.png");
+  background-size: cover;
+}
+
+#login .hero {
+  height: 100vh;
+}
+#home .fa-circle {
+  color: white;
+}
+
+.fondo-op {
+  margin: auto;
+  background: #000000de;
+}
+@media (min-width: 576px) {
+  .modal-dialog {
+    max-width: 610px;
+  }
+}
+
+#l-calendar input[type="checkbox"] + label:before {
+  width: 20px;
+  height: 20px;
+  border: 0.1em solid #0e65b2;
+}
+
+#l-calendar .button-add{
+  max-width: 300px;
+}
+#tutores .table-responsive .btn {
+  font-size: 12px;
+}
+#tutores .x_panel{
+  min-height: 700px ;
+}
+
+#horario1{
+  display: inline-flex;
+}
+
+.timepicker label {
+  margin-right: 10px;
+}
+
+.timepicker input{
+  max-width: 90px;
+}
+#cc .title_left{
+  position: relative;
+    top: 50px;
+    left: 20px;
+}
+
+@media (max-width: 575px) {
+  #cc .title_left{
+    font-size: 24px;
+    margin-bottom: 40px;
+    text-align: center;
+    left: 0;
+  }
+  }
+#enviarPruebas p{
+  font-size: 16px;
+  margin: 0;
+}

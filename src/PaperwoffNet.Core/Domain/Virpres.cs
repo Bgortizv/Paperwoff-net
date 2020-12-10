@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 
 namespace PaperwoffNet.Infrastructure
 {
@@ -11,6 +12,7 @@ namespace PaperwoffNet.Infrastructure
         }
 
         public long IdVirPres { get; set; }
+        [Display(Name = "Descripción")]
         public string Descrip { get; set; }
 
         public virtual ICollection<Tutorias> Tutorias { get; set; }

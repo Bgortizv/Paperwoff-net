@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 
 namespace PaperwoffNet.Infrastructure
 {
@@ -10,7 +11,9 @@ namespace PaperwoffNet.Infrastructure
         public long AsignaturaIdAsignatura { get; set; }
         public bool? Estado { get; set; }
 
+        [Display(Name = "Asignatura")]
         public virtual Asignatura AsignaturaIdAsignaturaNavigation { get; set; }
+        [Display(Name = "Tutor")]
         public virtual Tutores TutoresIdTutoresNavigation { get; set; }
     }
 }

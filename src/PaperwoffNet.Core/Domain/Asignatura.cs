@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 
 namespace PaperwoffNet.Infrastructure
 {
@@ -13,6 +14,7 @@ namespace PaperwoffNet.Infrastructure
         }
 
         public long IdAsignatura { get; set; }
+        [Display(Name = "Asignatura")]
         public string NombreAsignatura { get; set; }
         public int? Código { get; set; }
 

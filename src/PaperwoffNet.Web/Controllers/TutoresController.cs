@@ -156,5 +156,19 @@ namespace PaperwoffNet.Web.Controllers
         {
             return _context.Tutores.Any(e => e.IdTutores == id);
         }
+
+        public JsonResult ConsultaTutor(long id)
+        {
+            var InfoTutor = _context.Tutores.Where(x => x.IdTutores == id).Select(x => new
+            {
+
+                x.IdTutores,
+             
+                x.Profesion
+            }).FirstOrDefault();
+
+            return Json(InfoTutor);
+
+        }
     }
 }

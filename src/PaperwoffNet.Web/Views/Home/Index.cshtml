@@ -2,7 +2,207 @@
     ViewData["Title"] = "Home Page";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-</div>
+    
+    
+    <!-- HERO -->
+    <section class="container-fluid hero mt-5">
+        <div class="row mt-5">
+            <div class="col-md-5 col-12 col-left m-auto px-3">
+                <div class="text-center">
+                    <img src="../images/logo-blanco.png" width="300" alt="" class="py-4">
+                </div>
+                <div class="text-center py-4">
+                    <h3>Conoce PAPERWOFF, la solución ideal para coordinar tu EQUIPO y manejar tus PROYECTOS.</h3>
+                </div>
+                <div>
+                    <div class="row px-md-5 p-0">
+                        <div class="col-1 ">
+                            <i class="fa fa-circle"></i>
+                        </div>
+                        <div class="col-11">
+                            <p><b>Monitorea</b> tu progreso y tu equipo al instante.</p>
+                        </div>
+                        <div class="col-1">
+                            <i class="fa fa-circle"></i>
+                        </div>
+                        <div class="col-11">
+                            <p><b>Consigue</b> experiencia a través de procesos de consultoría y asesoría.</p>
+                        </div>
+                        <div class="col-1">
+                            <i class="fa fa-circle"></i>
+                        </div>
+                        <div class="col-11">
+                            <p> <b>Organiza</b> visual y dinámicamente tu trabajo.</p>
+                        </div>
+
+                    </div>
+                    <div class="row my-5 text-center">
+                        <div class="col-12">
+                            <h4>
+                                ¿Necesitas más información? <br> Escribenos a: <br> <span class="font-weight-bold">contacto@paperwoff.com</span>
+                            </h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4 col-12 col-right mx-auto my-5">
+                <div class="right-form mx-auto p-3">
+                    <div class="hero-card d-flex">
+                        <div class="fondo-op">
+                            <h5 class="text-center m-auto p-3">
+                                ¿Tu empresa tiene más de 100 empleados?<br>
+                                <br>
+                                Solicita <b>GRATIS</b> una asesoría de 20 minutos con uno de nuestros expertos.
+                            </h5>
+                        </div>
+                    </div>
+                    <div class="card-body px-0">
+                        <form id="formSusc" action="">
+                            <div class="form-group">
+                                <input type="text" class="form-control" id="nombre" required
+                                       aria-describedby="emailHelp" placeholder="Nombre completo">
+                            </div>
+                            <div class="form-group">
+                                <input type="submit" class="form-control" id="tlf" required
+                                       placeholder="Teléfono móvil" pattern="\d*" minlength="10" maxlength="10">
+                            </div>
+
+                            <div class="form-group">
+                                <input type="email" class="form-control" id="email" required
+                                       aria-describedby="emailHelp" placeholder="Correo electrónico">
+                            </div>
+                            <div class="form-group">
+                                <select class="form-control" id="area" required>
+                                    <option value="">País</option>
+                                    <option value="Brasil">Brasil</option>
+                                    <option value="Chile">Chile</option>
+                                    <option value="Colombia">Colombia</option>
+                                    <option value="Venezuela">Venezuela</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <input type="text" class="form-control" id="nombre" required
+                                       aria-describedby="emailHelp" placeholder="Nombre de tu empresa">
+                            </div>
+                            <div class="form-group">
+                                <input type="text" class="form-control" id="nombre" required
+                                       aria-describedby="emailHelp" placeholder="Área de tu empresa">
+                            </div>
+
+                            <div class="form-group">
+                                <select class="form-control" id="empleados" required>
+                                    <option value="">Número de empleados</option>
+                                    <option value="1-50">1 - 50</option>
+                                    <option value="51-100">51 - 100</option>
+                                    <option value="101-250">101 - 250</option>
+                                    <option value="251-500">251 - 500</option>
+                                    <option value="501-1000">501 - 1000</option>
+                                </select>
+                            </div>
+                            <div class="form-check form-check-inline ">
+                                <input type="checkbox" class="form-check-input" id="politicas" required>
+                                <label class="form-check-label check-mobile " for="politicas">
+                                    Acepto las políticas de
+                                    tratamiento de datos
+                                    y el envío de información
+                                </label>
+                            </div>
+                            <button type="submit" id=""
+                                    class="btn btn-light w-100 pt-2 mt-2 ">
+                                Suscribirme
+                            </button>
+                        </form>
+                        <!-- data-toggle="modal" data-target="#suscrip" -->
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+    </section>
+    <!-- /HERO -->
+    <!-- /QUE ES -->
+    <section class="section p-4 colorfondo que-es" id="que-es">
+        <div class="container">
+            <div class="row ">
+
+                <div class="col-md-12">
+                    <h1 class="title text-center font-weight-bold m-0">PAPERWOFF</h1>
+                </div>
+
+            </div>
+            <div class="row text-center pb-4">
+                <div class="col-md-12">
+                    <h5 class="font-weight-bold ">
+                        La mejor forma de optimizar la operatividad de tu equipo de trabajo
+                    </h5>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-8 m-auto">
+                    <div class="home-description">
+                        <h4 class="pb-3">
+                            Te ayudamos a organizar tu equipo de trabajo, controlas la programación y asignación de
+                            tareas desde una sola interfaz, calendario, control monetario y otras características de tus
+                            clientes ¡todo en uno!
+                        </h4>
+                    </div>
+                </div>
+                <div class="col-md-4 my-3 text-center">
+                    <img src="../images/home-d.png" class="img-fluid img-description " alt="">
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- /QUE ES -->
+    
+    <!-- Modal Suscripcion-->
+    <div class="modal fade" id="suscrip" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+         aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLongTitle">¡Gracias por suscribirte!</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p>
+                        Nuestros asesores te contactarán en las próximas horas para brindarte tu asesoría personalizada
+                    </p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Empieza JS de Bootstrap -->
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+            integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+            crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+            integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+            crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+            integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+            crossorigin="anonymous"></script>
+    <script>
+
+        $(document).ready(function () {
+            $('#formSusc').on('submit', function (e) {
+
+                $('#suscrip').modal('show');
+                e.preventDefault();
+                $("#formSusc")[0].reset();
+
+            });
+
+        });
+    </script>
+
+    <!-- Termina JS de bootstrap -->
